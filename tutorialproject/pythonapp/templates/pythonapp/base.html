@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title%}{% endblock%}</title>
+
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+      <link rel="stylesheet" href="{% static "css/demo.css" %}">
+
+  </head>
+  <body>
+ <div   class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <nav  class="mymenubar navbar navbar-default navbar-inverse navbar-fixed-top">
+
+                    <div class="navbar-header">
+                        <button class="navbar-brand navbar-toggle" data-target="#mainNavbar" data-toggle="collapse"  type="button" name="button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class='icon-bar'></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                      </div>
+
+                        <div  class="navbar-collapse collapse" id="mainNavbar">
+                            <ul class="nav navbar-nav">
+                                <li> <a href="/">Home</a>  </li>
+                                <li> <a href="/python/">Python</a>  </li>
+                                <li> <a href="/django/">Django</a>  </li>
+                                <li> <a href="/flask/">Flask</a> </li>
+                                <li> <a href="#">About</a>  </li>
+                              </ul>
+
+                            </div>
+                  </nav>
+                </div>
+              </div>
+
+
+
+<div class="row">
+        <div class="col-md-3">
+  <div class="row">
+<div class="col-xs-12 col-sm-12">
+
+<button id="pythonindexbtn" class="navbar-brand navbar-toggle pull-left" data-target="#pythonindex" data-toggle="collapse"  type="button" name="button">
+<span class=" glyphicon glyphicon-menu-down "></span>
+</button>
+</div>
+</div>
+
+
+
+
+
+
+
+<div  class="navbar-collapse collapse" id="pythonindex">
+            <div class="list-group">
+                  <p class="h3">Python Content</p>
+                  <a class="list-group-item" href="#">Introduction to Python</a>
+                  <a class="list-group-item" href=""> Python First Program</a>
+                  <a class="list-group-item" href="">Language Fundamental</a>
+                  <a class="list-group-item" href="#">Interpreter as Calculator</a>
+                  <a class="list-group-item"  href="#">Python Input- Output</a>
+                  <a class="list-group-item" href="#">Datatypes in Python</a>
+                  <a class="list-group-item" href="#">Type Casting</a>
+                  <a class="list-group-item" href="#">Python Built-in functions</a>
+                  <a class="list-group-item" href="#">Conditional Statements</a>
+                  <a class="list-group-item" href="#">Looping Statements</a>
+                  <a class="list-group-item" href="#"> break, continue and pass statements</a>
+                  <a class="list-group-item" href="#">Operators</a>
+                  <a class="list-group-item" href="#">Functions</a>
+                  <a class="list-group-item" href="#">Strings</a>
+                  <a class="list-group-item" href="#">List</a>
+                  <a class="list-group-item" href="#">Tuple</a>
+                  <a class="list-group-item" href="#">Set</a>
+                  <a class="list-group-item" href="#">Dictionary</a>
+                  <a class="list-group-item" href="#">Object Oriented Programming</a>
+                  <a class="list-group-item" href="#">Creating Class</a>
+                  <a class="list-group-item" href="#"> Types of Variables</a>
+                  <a class="list-group-item" href="#">Types of Methods</a>
+                  <a class="list-group-item" href="#">Class Methods in Python</a>
+                  <a class="list-group-item" href="#">Static Methods in Python</a>
+                  <a class="list-group-item" href="#">Python Special Methods</a>
+                  <a class="list-group-item" href="#">Inheritance</a>
+                  <a class="list-group-item" href="#">super() Method in Python</a>
+                  <a class="list-group-item" href="#">Modules</a>
+                </div>
+</div>
+           </div>
+
+            <div id="content" class="col-md-7">
+                  {% block content %}
+
+                  {% endblock %}
+
+              </div>
+
+                <div class="col-md-2">
+
+                </div>
+          </div>
+
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  </body>
+</html>
