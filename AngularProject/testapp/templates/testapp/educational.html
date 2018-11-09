@@ -1,0 +1,27 @@
+{% extends "testapp/base.html" %}
+{% load static %}
+{% block title %}
+
+{% endblock %}
+Educational Goods
+{% block body %}
+<h1>Educational Goods</h1>
+<hr>
+<div style="background:"{% static 'images/books.jpg' %}">
+<form method="post">
+  <div ng-app ng-init="qty=1;price=2">
+    {% csrf_token %}
+    {{form.as_p}}
+    <p>Total: {% verbatim %} {{qty * price |currency }}{% endverbatim %} </p>
+  </div>
+
+<button type="Submit" name="button">Submit</button>
+</form>
+<br>
+<br>
+<a href="/">Home</a>
+<br>
+<br>
+<a href="/electronics/">Electrical</a>
+</div>
+{% endblock %}

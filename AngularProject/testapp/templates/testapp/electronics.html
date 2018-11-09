@@ -1,0 +1,27 @@
+{% extends "testapp/base.html" %}
+
+{% block title %}
+
+{% endblock %}
+Electrical Goods
+{% block body %}
+<h1>Electrical Goods</h1>
+<hr>
+<form method="post">
+  <div ng-app ng-init="qty=1;price=2">
+    {% csrf_token %}
+    {{form.as_p}}
+    <p>Total: {% verbatim %} {{qty * price |currency }}{% endverbatim %} </p>
+  </div>
+
+<button type="Submit" name="button">Submit</button>
+</form>
+<br>
+<br>
+<a href="/">Home</a>
+<br>
+<br>
+
+<a href='/educational/'>Educational Goods</a>
+
+{% endblock %}
